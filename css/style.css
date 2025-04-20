@@ -617,7 +617,7 @@ img {
   border-radius: 5px;
 
   background-color: var(--color-back-green-light);
-  background-image: url("/img/chevron-down.svg");
+  background-image: url("../img/chevron-down.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -626,7 +626,7 @@ img {
 .ac.is-active > .ac-header #ac-trigger-3::after,
 .ac.is-active > .ac-header #ac-trigger-4::after,
 .ac.is-active > .ac-header #ac-trigger-5::after {
-  background-image: url("/img/chevron-up.svg");
+  background-image: url("../img/chevron-up.svg");
 }
 
 .ac__img {
@@ -641,19 +641,19 @@ img {
 }
 
 .ac__img_1 {
-  background-image: url("/img/icon-wrench.svg");
+  background-image: url("../img/icon-wrench.svg");
 }
 
 .ac__img_2 {
-  background-image: url("/img/icon-arrow.svg");
+  background-image: url("../img/icon-arrow.svg");
 }
 
 .ac__img_3 {
-  background-image: url("/img/icon-electro.svg");
+  background-image: url("../img/icon-electro.svg");
 }
 
 .ac__img_4 {
-  background-image: url("/img/icon-broom.svg");
+  background-image: url("../img/icon-broom.svg");
 }
 
 .table .table__tr .table__th {
@@ -912,7 +912,7 @@ img {
   margin-top: -7px;
 
   border-style: none;
-  background-image: url("/img/chevron-down_gray.svg");
+  background-image: url("../img/chevron-down_gray.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
