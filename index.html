@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ультрасервис - Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.4.0/dist/accordion.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body class="body">
+    <div class="dark__wrapper"></div>
+    <div class="body__container">
+        <header class="header">
+            <!-- burger menu -->
+            <button class="header__btn_burger">
+                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="2" fill="#637381" />
+                    <rect y="8" width="20" height="2" fill="#637381" />
+                    <rect y="16" width="20" height="2" fill="#637381" />
+                </svg>
+            </button>
+
+            <div class="header__logo">
+                <a href="index.html"><img src="img/Logo.svg" alt="logo"></a>
+            </div>
+            <nav class="header__nav nav">
+                <!-- burger close -->
+                <button class="header__nav_close">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.09094" width="29.5699" height="2" transform="rotate(45 2.09094 0)" fill="#637381" />
+                        <rect y="20.9092" width="29.5699" height="2" transform="rotate(-45 0 20.9092)" fill="#637381" />
+                    </svg>
+                </button>
+
+                <ul class="list-reset nav__list">
+                    <li class="nav__item nav__item_active">
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#block_pay">Оплата</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="form.html">Обратная связь</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#block_uslugi">Услуги</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- кнопка для неавторизованнных -->
+            <div class="header__button">
+                <a class="btn header__btn">Вход/Регистрация</a>
+            </div>
+
+            <!-- кнопка для авторизованных -->
+            <div class="header__button_lk">
+                <a class="btn btn_light header__btn_lk" href="">username</a>
+            </div>
+        </header>
+
+        <!-- форма входа попап-->
+        <div class="popup popup_login login">
+            <img class="popup__dot popup__dot_top" src="img/Dotted_Shape.svg" alt="">
+
+            <div class="popup__content">
+                <img class="popup__logo" src="img/Logo.svg" alt="logo">
+                <form action="" class="popup__form">
+                    <input class="input popup__input" type="" placeholder="Электронная почта или Лицевой счет">
+                    <div class="popup__wrapper_pass">
+                        <input class="input popup__input popup__input_pass" type="password" placeholder="Пароль">
+                        <a class="popup__eye" href="">
+                            <svg class="popup__icon" width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.01067 3.06221L5.0205 3.05828L5.03016 3.05393C5.97103 2.63054 6.97639 2.39797 7.99998 2.39797C10.304 2.39797 12.0362 3.48909 13.2216 4.6328C14.4065 5.77604 15.0136 6.9436 15.0524 7.02092C15.0526 7.02144 15.0533 7.02335 15.0541 7.02675C15.0553 7.03226 15.0562 7.03959 15.0562 7.04797C15.0562 7.05635 15.0553 7.06369 15.0541 7.0692C15.0536 7.07109 15.0532 7.07252 15.0529 7.07351C15.0482 7.08188 15.043 7.09109 15.0374 7.10111C14.8208 7.48563 13.933 9.06198 12.2358 10.2651L12.2013 10.2895L12.1714 10.3194L12.1464 10.3444L12.1214 10.3694L11.7679 10.723L12.1214 11.0765L13.6964 12.6515C13.715 12.6701 13.7187 12.6866 13.7187 12.698C13.7187 12.7094 13.715 12.7259 13.6964 12.7444L13.6768 12.764L13.6708 12.7715C13.6663 12.7722 13.6602 12.7728 13.6527 12.773C13.6509 12.7726 13.646 12.7714 13.6381 12.7678C13.6237 12.7612 13.6109 12.7518 13.6035 12.7444L13.6031 12.744L2.27853 1.44442C2.27849 1.44438 2.27845 1.44434 2.27841 1.4443C2.25996 1.4258 2.25623 1.40935 2.25623 1.39797C2.25623 1.38657 2.25998 1.37008 2.27853 1.35153C2.29708 1.33298 2.31357 1.32922 2.32498 1.32922C2.33638 1.32922 2.35287 1.33298 2.37142 1.35153L4.14642 3.12653L4.45306 3.43316L4.79998 3.17297C4.85264 3.13348 4.90927 3.10277 5.01067 3.06221ZM8.62142 7.57653L9.47498 8.43008V8.42933L9.48918 8.44414L11.2642 10.2941L11.6176 10.6625L11.9785 10.3016C11.977 10.303 11.9846 10.2956 12.0097 10.2773C12.0343 10.2594 12.063 10.2402 12.1023 10.214L12.1094 10.2093L12.1163 10.2043C13.5226 9.19608 14.3894 7.87837 14.7251 7.33615L14.8848 7.0782L14.7297 6.81744C14.4384 6.32741 13.73 5.26442 12.61 4.31902C11.487 3.37112 9.92687 2.52297 7.94998 2.52297C6.94917 2.52297 6.00165 2.74018 5.08708 3.17056L4.43804 3.47599L4.94917 3.97926L6.57417 5.57926L6.82888 5.83004L6.85958 5.81469L7.47142 6.42653L8.62142 7.57653ZM9.47498 7.73099V7.24761C9.47567 7.24407 9.47657 7.2395 9.47777 7.23353L9.47825 7.2311C9.48107 7.21706 9.48597 7.19258 9.48995 7.16736C9.49402 7.14159 9.49998 7.09824 9.49998 7.04797C9.49998 6.22183 8.82612 5.54797 7.99998 5.54797C7.94971 5.54797 7.90635 5.55393 7.88059 5.558C7.85539 5.56198 7.83093 5.56688 7.81688 5.56969L7.81442 5.57018C7.80845 5.57138 7.80388 5.57228 7.80034 5.57297H7.36667C7.40633 5.55757 7.44691 5.54298 7.4904 5.52825L7.57124 5.50804L7.57933 5.50602L7.58734 5.50374C7.71349 5.46769 7.86689 5.44797 7.99998 5.44797C8.89883 5.44797 9.62498 6.17412 9.62498 7.07297C9.62498 7.23579 9.60405 7.39405 9.55843 7.51806C9.54123 7.56116 9.5268 7.59865 9.51397 7.63196C9.49946 7.66965 9.48701 7.70198 9.47498 7.73099ZM7.7884 5.57519C7.78737 5.57535 7.78766 5.57527 7.78913 5.57507L7.7884 5.57519ZM9.47276 7.25955C9.4728 7.25932 9.47284 7.25908 9.47288 7.25882L9.47276 7.25955Z"
+                                    fill="#6B7280" stroke="#6B7280" />
+                                <path
+                                    d="M1.06908 7.04929L1.21901 6.79441C1.4508 6.40036 1.93301 5.68155 2.65209 4.93529L2.5624 4.83981C2.09128 5.33119 1.72039 5.81469 1.45225 6.20361C1.2864 6.44417 1.1608 6.64718 1.07595 6.79153C1.03355 6.86367 1.00141 6.921 0.979612 6.96086C0.959949 6.99681 0.949412 7.01722 0.947491 7.02095C0.947264 7.02156 0.946605 7.02345 0.945882 7.0267C0.944658 7.03221 0.943726 7.03954 0.943726 7.04792C0.943726 7.0563 0.944658 7.06364 0.945882 7.06915L1.06908 7.04929ZM1.06908 7.04929L1.22021 7.30346C1.51158 7.79349 2.21997 8.85648 3.33996 9.80188C4.46291 10.7498 6.02308 11.5979 7.99997 11.5979C8.45908 11.5979 8.9124 11.54 9.34824 11.4477L9.37844 11.5559M1.06908 7.04929L9.37844 11.5559M9.37844 11.5559C8.92238 11.6478 8.45979 11.6979 7.99997 11.6979C5.69595 11.6979 3.9638 10.6068 2.77839 9.4631C1.59347 8.31985 0.986312 7.1523 0.94752 7.07498L9.37844 11.5559Z"
+                                    fill="#6B7280" stroke="#6B7280" />
+                            </svg>
+                        </a>
+                    </div>
+                    <a class="btn popup__btn popup__btn_login">Войти</a>
+                </form>
+                <a class="popup__forgetpass" href="#">
+                    Забыли пароль?
+                </a>
+                <p class="paragraph-reset popup__reg">
+                    Нет аккаунта? <a class="popup__link popup__link_signup">Регистрация</a>
+                </p>
+            </div>
+
+            <img class="popup__dot popup__dot_bottom" src="img/Dotted_Shape.svg" alt="">
+        </div>
+
+        <!-- форма регистрации попап -->
+        <div class="popup popup_signup signup">
+            <img class="popup__dot popup__dot_top" src="img/Dotted_Shape.svg" alt="">
+
+            <div class="popup__content">
+                <img class="popup__logo" src="img/Logo.svg" alt="logo">
+                <form action="" class="popup__form form_signup">
+                    <fieldset class="form__group">
+                        <legend class="form__legend">
+                            Номер <a class="popup__tooltip" id="popup__tooltip">лицевого счета&nbsp;<svg
+                                    class="popup__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.9697 6.09064H9.93939C9.57576 6.09064 9.24242 6.39367 9.24242 6.78761C9.24242 7.18155 9.54545 7.48458 9.93939 7.48458H9.9697C10.3333 7.48458 10.6667 7.18155 10.6667 6.78761C10.6667 6.39367 10.3636 6.09064 9.9697 6.09064Z"
+                                        fill="#2BAE89" />
+                                    <path
+                                        d="M9.9697 8.48444C9.60606 8.48444 9.27273 8.78747 9.27273 9.18141V13.8481C9.27273 14.2117 9.57576 14.545 9.9697 14.545C10.3333 14.545 10.6667 14.242 10.6667 13.8481V9.1511C10.6667 8.78747 10.3636 8.48444 9.9697 8.48444Z"
+                                        fill="#2BAE89" />
+                                    <path
+                                        d="M9.9697 0.848145C4.90909 0.848145 0.787879 4.93905 0.787879 9.99966C0.787879 15.0603 4.90909 19.1815 9.9697 19.1815C15.0303 19.1815 19.1212 15.0603 19.1212 9.99966C19.1212 4.93905 15.0303 0.848145 9.9697 0.848145ZM9.9697 17.8178C5.66667 17.8178 2.15152 14.3027 2.15152 9.99966C2.15152 5.69663 5.66667 2.18148 9.9697 2.18148C14.2727 2.18148 17.7576 5.69663 17.7576 9.99966C17.7576 14.3027 14.2727 17.8178 9.9697 17.8178Z"
+                                        fill="#2BAE89" />
+                                </svg>
+                            </a>
+                        </legend>
+                        <input class="input popup__input" type="number" placeholder="Введите номер лицевого счета">
+                    </fieldset>
+                    <fieldset class="form__group">
+                        <legend class="form__legend">
+                            Электронная почта
+                        </legend>
+                        <input class="input popup__input" type="email" placeholder="Введите электронную почту">
+                    </fieldset>
+                    <fieldset class="form__group">
+                        <legend class="form__legend">
+                            Пароль
+                        </legend>
+                        <input class="input popup__input" type="password" placeholder="Введите пароль">
+                    </fieldset>
+                    <fieldset class="form__group">
+                        <legend class="form__legend">
+                            Повторите пароль
+                        </legend>
+                        <input class="input popup__input" type="password" placeholder="Введите пароль">
+                    </fieldset>
+
+                    <a class="btn popup__btn popup__btn_signup">Зарегистрироваться</a>
+                </form>
+                <p class="paragraph-reset popup__konf">
+                    Продолжая вы даете <a class="popup__link" href="#">согласие на обработку персональных данных</a>
+                </p>
+                <p class="paragraph-reset popup__reg">
+                    Есть аккаунт? <a class="popup__link popup__link_login">Войти</a>
+                </p>
+            </div>
+
+            <img class="popup__dot popup__dot_bottom" src="img/Dotted_Shape.svg" alt="">
+        </div>
+
+        <main class="main">
+            <section class="main__hero hero">
+                <!-- для неавторизованных (по умолчанию) -->
+                <div class="hero__text hero__text_notlk col-xxl-7 col-xl-7 col-lg-7 col-md-12">
+                    <p class="paragraph-reset hero__title">
+                        Быстро и легко <span class="text_green">управляйте</span> своими <span
+                            class="text_green">коммунальными платежами</span>
+                    </p>
+                    <a class="btn hero__btn">Войти в личный кабинет</a>
+                </div>
+
+                <!-- для авторизованных -->
+                <div class="hero__text hero__text_lk col-xxl-7 col-xl-7 col-lg-7 col-md-12">
+                    <p class="paragraph-reset hero__title">
+                        Доброе утро, <span class="text_green">Name!</span>
+                    </p>
+                    <a class="btn hero__btn">Оплатить счет</a>
+                </div>
+
+                <div class="hero__image col-xxl-5 col-xl-5 col-lg-5">
+                    <img class="hero__img" src="img/Home_Hero_Animation.png" alt="image">
+                </div>
+            </section>
+
+            <section class="main__advantages advantages">
+                <img class="advantages__back" src="img/bg_Shapes.png" alt="">
+                <div class="advantages__cart">
+                    <p class="paragraph-reset advantages__title">
+                        Оплата&nbsp;счета
+                    </p>
+                    <p class="paragraph-reset advantages__descr">
+                        не выходя из дома с любого устройства
+                    </p>
+                </div>
+                <div class="advantages__cart">
+                    <p class="paragraph-reset advantages__title">
+                        Эл.&nbsp;квитанция
+                    </p>
+                    <p class="paragraph-reset advantages__descr">
+                        получайте квитанцию по почте, которая&nbsp;всегда&nbsp;будет&nbsp;под рукой
+                    </p>
+                </div>
+                <div class="advantages__cart">
+                    <p class="paragraph-reset advantages__title">
+                        Обратная&nbsp;связь
+                    </p>
+                    <p class="paragraph-reset advantages__descr">
+                        оформляйте заявки на ремонт и&nbsp;техническое&nbsp;обслуживание
+                    </p>
+                </div>
+            </section>
+
+            <!-- ====== Contact Section Start -->
+            <section id="block_pay" class="pay relative z-10 overflow-hidden bg-white py-20 lg:py-[120px]">
+                <div class="container mx-auto">
+                    <div class="flex flex-wrap -mx-4 lg:justify-between">
+                        <div class="w-full px-4 lg:w-1/2 xl:w-6/12">
+                            <div class="mb-12 max-w-[570px] lg:mb-0">
+                                <h2
+                                    class="text-dark mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+                                    Оплата счета
+                                </h2>
+                                <p class="text-base leading-relaxed text-body-color mb-9">
+                                    Мы предоставляем возможность оплаты квитанции не заходя в Личный кабинет, для этого
+                                    нам необходим номер вашего <a class="pay__tooltip" id="pay__tooltip">Лицевого
+                                        счета&nbsp;<svg class="pay__svg" width="20" height="20" viewBox="0 0 20 20"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.9697 6.09064H9.93939C9.57576 6.09064 9.24242 6.39367 9.24242 6.78761C9.24242 7.18155 9.54545 7.48458 9.93939 7.48458H9.9697C10.3333 7.48458 10.6667 7.18155 10.6667 6.78761C10.6667 6.39367 10.3636 6.09064 9.9697 6.09064Z"
+                                                fill="#2BAE89" />
+                                            <path
+                                                d="M9.9697 8.48444C9.60606 8.48444 9.27273 8.78747 9.27273 9.18141V13.8481C9.27273 14.2117 9.57576 14.545 9.9697 14.545C10.3333 14.545 10.6667 14.242 10.6667 13.8481V9.1511C10.6667 8.78747 10.3636 8.48444 9.9697 8.48444Z"
+                                                fill="#2BAE89" />
+                                            <path
+                                                d="M9.9697 0.848145C4.90909 0.848145 0.787879 4.93905 0.787879 9.99966C0.787879 15.0603 4.90909 19.1815 9.9697 19.1815C15.0303 19.1815 19.1212 15.0603 19.1212 9.99966C19.1212 4.93905 15.0303 0.848145 9.9697 0.848145ZM9.9697 17.8178C5.66667 17.8178 2.15152 14.3027 2.15152 9.99966C2.15152 5.69663 5.66667 2.18148 9.9697 2.18148C14.2727 2.18148 17.7576 5.69663 17.7576 9.99966C17.7576 14.3027 14.2727 17.8178 9.9697 17.8178Z"
+                                                fill="#2BAE89" />
+                                        </svg>
+                                    </a>
+                                </p>
+                                <div class="mb-8 flex w-full max-w-[370px]">
+                                    <div
+                                        class="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]">
+                                        <img src="img/ruble.svg" alt="">
+                                    </div>
+                                    <div class="w-full">
+                                        <h4 class="mb-1 text-xl font-bold text-dark ">
+                                            Оплата через СБП
+                                        </h4>
+                                        <!-- <p class="text-base text-body-color ">
+                                            99 S.t Jomblo Park Pekanbaru 28292. Indonesia
+                                        </p> -->
+                                    </div>
+                                </div>
+                                <div class="mb-8 flex w-full max-w-[370px]">
+                                    <div
+                                        class="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]">
+                                        <img src="img/statistics.svg" alt="">
+                                    </div>
+                                    <div class="w-full">
+                                        <h4 class="mb-1 text-xl font-bold text-dark ">
+                                            Чек об оплате на электронную почту
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full px-4 lg:w-1/2 xl:w-5/12">
+                            <div class="relative p-8 bg-white rounded-lg shadow-lg sm:p-12">
+                                <form>
+                                    <div class="mb-6">
+                                        <input type="text" placeholder="Номер лицевого счета"
+                                            class="border-stroke text-body-color focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none" />
+                                    </div>
+                                    <div class="mb-6">
+                                        <input type="email" placeholder="Электронная почта (для отправки чека)"
+                                            class="border-stroke text-body-color focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none" />
+                                    </div>
+                                    <div class="mb-6">
+                                        <input type="number" placeholder="Сумма платежа"
+                                            class="border-stroke text-body-color focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none" />
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="w-full p-3 text-white transition border rounded border-primary bg-primary hover:bg-opacity-90">
+                                            Отправить
+                                        </button>
+                                    </div>
+                                </form>
+                                <div>
+                                    <span class="absolute -top-10 -right-9 z-[-1]">
+                                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 100C0 44.7715 0 0 0 0C55.2285 0 100 44.7715 100 100C100 100 100 100 0 100Z"
+                                                fill="#2BAE89" />
+                                        </svg>
+                                    </span>
+                                    <span class="absolute -right-10 top-[90px] z-[-1]">
+                                        <svg width="34" height="134" viewBox="0 0 34 134" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="31.9993" cy="132" r="1.66667"
+                                                transform="rotate(180 31.9993 132)" fill="#13C296" />
+                                            <circle cx="31.9993" cy="117.333" r="1.66667"
+                                                transform="rotate(180 31.9993 117.333)" fill="#13C296" />
+                                            <circle cx="31.9993" cy="102.667" r="1.66667"
+                                                transform="rotate(180 31.9993 102.667)" fill="#13C296" />
+                                            <circle cx="31.9993" cy="88" r="1.66667" transform="rotate(180 31.9993 88)"
+                                                fill="#13C296" />
+                                            <circle cx="31.9993" cy="73.3333" r="1.66667"
+                                                transform="rotate(180 31.9993 73.3333)" fill="#13C296" />
+                                            <circle cx="31.9993" cy="45" r="1.66667" transform="rotate(180 31.9993 45)"
+                                                fill="#13C296" />
+                                            <circle cx="31.9993" cy="16" r="1.66667" transform="rotate(180 31.9993 16)"
+                                                fill="#13C296" />
+                                            <circle cx="31.9993" cy="59" r="1.66667" transform="rotate(180 31.9993 59)"
+                                                fill="#13C296" />
+                                            <circle cx="31.9993" cy="30.6666" r="1.66667"
+                                                transform="rotate(180 31.9993 30.6666)" fill="#13C296" />
+                                            <circle cx="31.9993" cy="1.66665" r="1.66667"
+                                                transform="rotate(180 31.9993 1.66665)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="132" r="1.66667"
+                                                transform="rotate(180 17.3333 132)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="117.333" r="1.66667"
+                                                transform="rotate(180 17.3333 117.333)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="102.667" r="1.66667"
+                                                transform="rotate(180 17.3333 102.667)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="88" r="1.66667" transform="rotate(180 17.3333 88)"
+                                                fill="#13C296" />
+                                            <circle cx="17.3333" cy="73.3333" r="1.66667"
+                                                transform="rotate(180 17.3333 73.3333)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="45" r="1.66667" transform="rotate(180 17.3333 45)"
+                                                fill="#13C296" />
+                                            <circle cx="17.3333" cy="16" r="1.66667" transform="rotate(180 17.3333 16)"
+                                                fill="#13C296" />
+                                            <circle cx="17.3333" cy="59" r="1.66667" transform="rotate(180 17.3333 59)"
+                                                fill="#13C296" />
+                                            <circle cx="17.3333" cy="30.6666" r="1.66667"
+                                                transform="rotate(180 17.3333 30.6666)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="1.66665" r="1.66667"
+                                                transform="rotate(180 17.3333 1.66665)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="132" r="1.66667"
+                                                transform="rotate(180 2.66536 132)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="117.333" r="1.66667"
+                                                transform="rotate(180 2.66536 117.333)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="102.667" r="1.66667"
+                                                transform="rotate(180 2.66536 102.667)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="88" r="1.66667" transform="rotate(180 2.66536 88)"
+                                                fill="#13C296" />
+                                            <circle cx="2.66536" cy="73.3333" r="1.66667"
+                                                transform="rotate(180 2.66536 73.3333)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="45" r="1.66667" transform="rotate(180 2.66536 45)"
+                                                fill="#13C296" />
+                                            <circle cx="2.66536" cy="16" r="1.66667" transform="rotate(180 2.66536 16)"
+                                                fill="#13C296" />
+                                            <circle cx="2.66536" cy="59" r="1.66667" transform="rotate(180 2.66536 59)"
+                                                fill="#13C296" />
+                                            <circle cx="2.66536" cy="30.6666" r="1.66667"
+                                                transform="rotate(180 2.66536 30.6666)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="1.66665" r="1.66667"
+                                                transform="rotate(180 2.66536 1.66665)" fill="#13C296" />
+                                        </svg>
+                                    </span>
+                                    <span class="absolute -left-7 -bottom-7 z-[-1]">
+                                        <svg width="107" height="134" viewBox="0 0 107 134" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="104.999" cy="132" r="1.66667"
+                                                transform="rotate(180 104.999 132)" fill="#13C296" />
+                                            <circle cx="104.999" cy="117.333" r="1.66667"
+                                                transform="rotate(180 104.999 117.333)" fill="#13C296" />
+                                            <circle cx="104.999" cy="102.667" r="1.66667"
+                                                transform="rotate(180 104.999 102.667)" fill="#13C296" />
+                                            <circle cx="104.999" cy="88" r="1.66667" transform="rotate(180 104.999 88)"
+                                                fill="#13C296" />
+                                            <circle cx="104.999" cy="73.3333" r="1.66667"
+                                                transform="rotate(180 104.999 73.3333)" fill="#13C296" />
+                                            <circle cx="104.999" cy="45" r="1.66667" transform="rotate(180 104.999 45)"
+                                                fill="#13C296" />
+                                            <circle cx="104.999" cy="16" r="1.66667" transform="rotate(180 104.999 16)"
+                                                fill="#13C296" />
+                                            <circle cx="104.999" cy="59" r="1.66667" transform="rotate(180 104.999 59)"
+                                                fill="#13C296" />
+                                            <circle cx="104.999" cy="30.6666" r="1.66667"
+                                                transform="rotate(180 104.999 30.6666)" fill="#13C296" />
+                                            <circle cx="104.999" cy="1.66665" r="1.66667"
+                                                transform="rotate(180 104.999 1.66665)" fill="#13C296" />
+                                            <circle cx="90.3333" cy="132" r="1.66667"
+                                                transform="rotate(180 90.3333 132)" fill="#13C296" />
+                                            <circle cx="90.3333" cy="117.333" r="1.66667"
+                                                transform="rotate(180 90.3333 117.333)" fill="#13C296" />
+                                            <circle cx="90.3333" cy="102.667" r="1.66667"
+                                                transform="rotate(180 90.3333 102.667)" fill="#13C296" />
+                                            <circle cx="90.3333" cy="88" r="1.66667" transform="rotate(180 90.3333 88)"
+                                                fill="#13C296" />
+                                            <circle cx="90.3333" cy="73.3333" r="1.66667"
+                                                transform="rotate(180 90.3333 73.3333)" fill="#13C296" />
+                                            <circle cx="90.3333" cy="45" r="1.66667" transform="rotate(180 90.3333 45)"
+                                                fill="#13C296" />
+                                            <circle cx="90.3333" cy="16" r="1.66667" transform="rotate(180 90.3333 16)"
+                                                fill="#13C296" />
+                                            <circle cx="90.3333" cy="59" r="1.66667" transform="rotate(180 90.3333 59)"
+                                                fill="#13C296" />
+                                            <circle cx="90.3333" cy="30.6666" r="1.66667"
+                                                transform="rotate(180 90.3333 30.6666)" fill="#13C296" />
+                                            <circle cx="90.3333" cy="1.66665" r="1.66667"
+                                                transform="rotate(180 90.3333 1.66665)" fill="#13C296" />
+                                            <circle cx="75.6654" cy="132" r="1.66667"
+                                                transform="rotate(180 75.6654 132)" fill="#13C296" />
+                                            <circle cx="31.9993" cy="132" r="1.66667"
+                                                transform="rotate(180 31.9993 132)" fill="#13C296" />
+                                            <circle cx="75.6654" cy="117.333" r="1.66667"
+                                                transform="rotate(180 75.6654 117.333)" fill="#13C296" />
+                                            <circle cx="31.9993" cy="117.333" r="1.66667"
+                                                transform="rotate(180 31.9993 117.333)" fill="#13C296" />
+                                            <circle cx="75.6654" cy="102.667" r="1.66667"
+                                                transform="rotate(180 75.6654 102.667)" fill="#13C296" />
+                                            <circle cx="31.9993" cy="102.667" r="1.66667"
+                                                transform="rotate(180 31.9993 102.667)" fill="#13C296" />
+                                            <circle cx="75.6654" cy="88" r="1.66667" transform="rotate(180 75.6654 88)"
+                                                fill="#13C296" />
+                                            <circle cx="31.9993" cy="88" r="1.66667" transform="rotate(180 31.9993 88)"
+                                                fill="#13C296" />
+                                            <circle cx="75.6654" cy="73.3333" r="1.66667"
+                                                transform="rotate(180 75.6654 73.3333)" fill="#13C296" />
+                                            <circle cx="31.9993" cy="73.3333" r="1.66667"
+                                                transform="rotate(180 31.9993 73.3333)" fill="#13C296" />
+                                            <circle cx="75.6654" cy="45" r="1.66667" transform="rotate(180 75.6654 45)"
+                                                fill="#13C296" />
+                                            <circle cx="31.9993" cy="45" r="1.66667" transform="rotate(180 31.9993 45)"
+                                                fill="#13C296" />
+                                            <circle cx="75.6654" cy="16" r="1.66667" transform="rotate(180 75.6654 16)"
+                                                fill="#13C296" />
+                                            <circle cx="31.9993" cy="16" r="1.66667" transform="rotate(180 31.9993 16)"
+                                                fill="#13C296" />
+                                            <circle cx="75.6654" cy="59" r="1.66667" transform="rotate(180 75.6654 59)"
+                                                fill="#13C296" />
+                                            <circle cx="31.9993" cy="59" r="1.66667" transform="rotate(180 31.9993 59)"
+                                                fill="#13C296" />
+                                            <circle cx="75.6654" cy="30.6666" r="1.66667"
+                                                transform="rotate(180 75.6654 30.6666)" fill="#13C296" />
+                                            <circle cx="31.9993" cy="30.6666" r="1.66667"
+                                                transform="rotate(180 31.9993 30.6666)" fill="#13C296" />
+                                            <circle cx="75.6654" cy="1.66665" r="1.66667"
+                                                transform="rotate(180 75.6654 1.66665)" fill="#13C296" />
+                                            <circle cx="31.9993" cy="1.66665" r="1.66667"
+                                                transform="rotate(180 31.9993 1.66665)" fill="#13C296" />
+                                            <circle cx="60.9993" cy="132" r="1.66667"
+                                                transform="rotate(180 60.9993 132)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="132" r="1.66667"
+                                                transform="rotate(180 17.3333 132)" fill="#13C296" />
+                                            <circle cx="60.9993" cy="117.333" r="1.66667"
+                                                transform="rotate(180 60.9993 117.333)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="117.333" r="1.66667"
+                                                transform="rotate(180 17.3333 117.333)" fill="#13C296" />
+                                            <circle cx="60.9993" cy="102.667" r="1.66667"
+                                                transform="rotate(180 60.9993 102.667)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="102.667" r="1.66667"
+                                                transform="rotate(180 17.3333 102.667)" fill="#13C296" />
+                                            <circle cx="60.9993" cy="88" r="1.66667" transform="rotate(180 60.9993 88)"
+                                                fill="#13C296" />
+                                            <circle cx="17.3333" cy="88" r="1.66667" transform="rotate(180 17.3333 88)"
+                                                fill="#13C296" />
+                                            <circle cx="60.9993" cy="73.3333" r="1.66667"
+                                                transform="rotate(180 60.9993 73.3333)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="73.3333" r="1.66667"
+                                                transform="rotate(180 17.3333 73.3333)" fill="#13C296" />
+                                            <circle cx="60.9993" cy="45" r="1.66667" transform="rotate(180 60.9993 45)"
+                                                fill="#13C296" />
+                                            <circle cx="17.3333" cy="45" r="1.66667" transform="rotate(180 17.3333 45)"
+                                                fill="#13C296" />
+                                            <circle cx="60.9993" cy="16" r="1.66667" transform="rotate(180 60.9993 16)"
+                                                fill="#13C296" />
+                                            <circle cx="17.3333" cy="16" r="1.66667" transform="rotate(180 17.3333 16)"
+                                                fill="#13C296" />
+                                            <circle cx="60.9993" cy="59" r="1.66667" transform="rotate(180 60.9993 59)"
+                                                fill="#13C296" />
+                                            <circle cx="17.3333" cy="59" r="1.66667" transform="rotate(180 17.3333 59)"
+                                                fill="#13C296" />
+                                            <circle cx="60.9993" cy="30.6666" r="1.66667"
+                                                transform="rotate(180 60.9993 30.6666)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="30.6666" r="1.66667"
+                                                transform="rotate(180 17.3333 30.6666)" fill="#13C296" />
+                                            <circle cx="60.9993" cy="1.66665" r="1.66667"
+                                                transform="rotate(180 60.9993 1.66665)" fill="#13C296" />
+                                            <circle cx="17.3333" cy="1.66665" r="1.66667"
+                                                transform="rotate(180 17.3333 1.66665)" fill="#13C296" />
+                                            <circle cx="46.3333" cy="132" r="1.66667"
+                                                transform="rotate(180 46.3333 132)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="132" r="1.66667"
+                                                transform="rotate(180 2.66536 132)" fill="#13C296" />
+                                            <circle cx="46.3333" cy="117.333" r="1.66667"
+                                                transform="rotate(180 46.3333 117.333)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="117.333" r="1.66667"
+                                                transform="rotate(180 2.66536 117.333)" fill="#13C296" />
+                                            <circle cx="46.3333" cy="102.667" r="1.66667"
+                                                transform="rotate(180 46.3333 102.667)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="102.667" r="1.66667"
+                                                transform="rotate(180 2.66536 102.667)" fill="#13C296" />
+                                            <circle cx="46.3333" cy="88" r="1.66667" transform="rotate(180 46.3333 88)"
+                                                fill="#13C296" />
+                                            <circle cx="2.66536" cy="88" r="1.66667" transform="rotate(180 2.66536 88)"
+                                                fill="#13C296" />
+                                            <circle cx="46.3333" cy="73.3333" r="1.66667"
+                                                transform="rotate(180 46.3333 73.3333)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="73.3333" r="1.66667"
+                                                transform="rotate(180 2.66536 73.3333)" fill="#13C296" />
+                                            <circle cx="46.3333" cy="45" r="1.66667" transform="rotate(180 46.3333 45)"
+                                                fill="#13C296" />
+                                            <circle cx="2.66536" cy="45" r="1.66667" transform="rotate(180 2.66536 45)"
+                                                fill="#13C296" />
+                                            <circle cx="46.3333" cy="16" r="1.66667" transform="rotate(180 46.3333 16)"
+                                                fill="#13C296" />
+                                            <circle cx="2.66536" cy="16" r="1.66667" transform="rotate(180 2.66536 16)"
+                                                fill="#13C296" />
+                                            <circle cx="46.3333" cy="59" r="1.66667" transform="rotate(180 46.3333 59)"
+                                                fill="#13C296" />
+                                            <circle cx="2.66536" cy="59" r="1.66667" transform="rotate(180 2.66536 59)"
+                                                fill="#13C296" />
+                                            <circle cx="46.3333" cy="30.6666" r="1.66667"
+                                                transform="rotate(180 46.3333 30.6666)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="30.6666" r="1.66667"
+                                                transform="rotate(180 2.66536 30.6666)" fill="#13C296" />
+                                            <circle cx="46.3333" cy="1.66665" r="1.66667"
+                                                transform="rotate(180 46.3333 1.66665)" fill="#13C296" />
+                                            <circle cx="2.66536" cy="1.66665" r="1.66667"
+                                                transform="rotate(180 2.66536 1.66665)" fill="#13C296" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ====== Contact Section End -->
+
+            <div class="main__feedback feedback">
+                <section id="block_feedback" class="feedback__form form col-xxl-6 col-xl-6 col-lg-12">
+                    <p class="paragraph-reset form__pretitle pretitle">
+                        Обратная связь
+                    </p>
+                    <h2 class="head-reset form__title title">
+                        Форма связи
+                    </h2>
+                    <p class="paragraph-reset form__descr">
+                        Оформите заявку на ремонт или техническое обслуживание.
+                        <br><br>
+                        Мы готовы оперативно отреагировать на ваши потребности и предложить помощь и решение для
+                        поддержания комфортных условий жизни.
+                    </p>
+                    <a href="form.html" class="btn form__btn">
+                        Отправить обращение
+                    </a>
+                    <svg class="form__back" xmlns="http://www.w3.org/2000/svg" width="227" height="215"
+                        viewBox="0 0 227 215" fill="none">
+                        <path
+                            d="M65.4167 65.4167H162.083M65.4167 113.75H137.917M186.25 5C195.864 5 205.084 8.81919 211.883 15.6174C218.681 22.4156 222.5 31.6359 222.5 41.25V137.917C222.5 147.531 218.681 156.751 211.883 163.549C205.084 170.347 195.864 174.167 186.25 174.167H125.833L65.4167 210.417V174.167H41.25C31.6359 174.167 22.4156 170.347 15.6174 163.549C8.81919 156.751 5 147.531 5 137.917V41.25C5 31.6359 8.81919 22.4156 15.6174 15.6174C22.4156 8.81919 31.6359 5 41.25 5H186.25Z"
+                            stroke="white" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </section>
+                <section id="block_contacts" class="feedback__contacts contacts col-xxl-6 col-xl-6 col-lg-12">
+                    <p class="paragraph-reset contacts__pretitle pretitle">
+                        Свяжитесь с нами
+                    </p>
+                    <h2 class="head-reset contacts__title title">
+                        Контакты
+                    </h2>
+                    <div class="contacts__items items">
+                        <div class="items__address item">
+                            <div class="items__image">
+                                <img class="items__img" src="img/icon-house.svg" alt="">
+                            </div>
+                            <div class="items__text">
+                                <p class="paragraph-reset items__title">
+                                    Адрес
+                                </p>
+                                <p class="paragraph-reset items__descr">
+                                    Саха /Якутия/ Респ, р-н. Нерюнгринский, п.&nbsp;Беркакит, ул. Бочкарева, д.&nbsp;7
+                                </p>
+                            </div>
+                        </div>
+                        <div class="items__tel item">
+                            <div class="items__image">
+                                <img class="items__img" src="img/icon-phone-ring.svg" alt="">
+                            </div>
+                            <div class="items__text">
+                                <p class="paragraph-reset items__title">
+                                    Телефон
+                                </p>
+                                <p class="paragraph-reset items__descr">
+                                    <a href="tel:+74114772300">+7 41147 7-23-00</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="items__email item">
+                            <div class="items__image">
+                                <img class="items__img" src="img/icon-email.svg" alt="">
+                            </div>
+                            <div class="items__text">
+                                <p class="paragraph-reset items__title">
+                                    Электронная почта
+                                </p>
+                                <p class="paragraph-reset items__descr">
+                                    <a href="mailto:ultraservis08@yandex.ru">ultraservis08@yandex.ru</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section id="block_uslugi" class="main__uslugi uslugi">
+                <p class="uslugi__pretitle pretitle">
+                    Каталог товаров и услуг
+                </p>
+                <h2 class="head-reset uslugi__title title">
+                    Услуги
+                </h2>
+                <div class="accordion-container_uslugi">
+                    <div class="ac ac_uslugi">
+                        <p class="ac-header ac-header_uslugi paragraph-reset">
+                            <button type="button" class="ac-trigger ac-trigger_uslugi">
+                                <div class="ac__img ac__img_1"></div>
+                                <span class="ac-trigger__text_uslugi">Санитарно-техническое оборудование</span>
+                            </button>
+                        </p>
+                        <div class="ac-panel ac-panel_uslugi">
+                            <br>
+                            <div class="scroll_icon"></div>
+
+                            <table class="ac-text ac-text_uslugi table">
+                                <tr class="table__tr">
+                                    <th class="table__th table__column1">&nbsp;</th>
+                                    <th class="table__th table__column2">Ед.&nbsp;изм.</th>
+                                    <th class="table__th table__column3">Норма времени <br>на&nbsp;ед.&nbsp;изм. чел/час
+                                    </th>
+                                    <th class="table__th table__column4">Тариф руб.</th>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Перекрытие стояка водоснабжения</td>
+                                    <td class="table__td">1&nbsp;стояк</td>
+                                    <td class="table__td">0,58</td>
+                                    <td class="table__td">595</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена вентильной головки у смесителей</td>
+                                    <td class="table__td">шт</td>
+                                    <td class="table__td">0,25</td>
+                                    <td class="table__td">254</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена водоразборного крана</td>
+                                    <td class="table__td">1&nbsp;кран</td>
+                                    <td class="table__td">0,29</td>
+                                    <td class="table__td">298</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">
+                                        Смена смесителя<br>
+                                        - с душем (смеситель в ванной комнате) <br> - без душа (кухонный смеситель)</td>
+                                    <td class="table__td">
+                                        &nbsp; <br> 1&nbsp;смесит. <br> 1&nbsp;смесит.</td>
+                                    <td class="table__td">
+                                        &nbsp; <br> 1,2 <br> 1,4</td>
+                                    <td class="table__td">
+                                        &nbsp; <br> 1222 <br>1428
+                                    </td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Устранение засоров санитарных приборов (по вине проживающего)
+                                    </td>
+                                    <td class="table__td">1&nbsp;прибор</td>
+                                    <td class="table__td">0,58</td>
+                                    <td class="table__td">592</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Ремонт высокорасположенных смывных бачков, со сменой прокладки
+                                        и поплавка</td>
+                                    <td class="table__td">1&nbsp;бачок</td>
+                                    <td class="table__td">1,06</td>
+                                    <td class="table__td">1079</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Ремонт смывных бачков "Компакт" со сменой резиновой груши,
+                                        прокладки поплавкового клапана</td>
+                                    <td class="table__td">1&nbsp;бачок</td>
+                                    <td class="table__td">1</td>
+                                    <td class="table__td">1019</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена раковин <br> - с цельноотлитой спинкой <br> - с отъемной
+                                        спинкой</td>
+                                    <td class="table__td">
+                                        &nbsp; <br>1&nbsp;раков. <br> 1&nbsp;раков.</td>
+                                    <td class="table__td">
+                                        &nbsp; <br>1,08 <br>
+                                        0,76</td>
+                                    <td class="table__td">
+                                        &nbsp; <br>1102 <br>
+                                        775</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена мойки на 1 отделение</td>
+                                    <td class="table__td">1&nbsp;мойка</td>
+                                    <td class="table__td">1,56</td>
+                                    <td class="table__td">1592</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена умывальника <br> - без смесителя <br> - со смесителем
+                                    </td>
+                                    <td class="table__td">
+                                        &nbsp; <br>1&nbsp;умыв. <br>
+                                        1&nbsp;умыв.</td>
+                                    <td class="table__td">
+                                        &nbsp; <br> 0,88 <br>
+                                        1,52</td>
+                                    <td class="table__td">
+                                        &nbsp; <br>896 <br>
+                                        1551</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена сифона на трубопроводах <br> - пластмассовых <br> -
+                                        чугунных</td>
+                                    <td class="table__td">
+                                        &nbsp; <br> 1 сифон <br>
+                                        1 сифон</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        0,49 <br>
+                                        0,49</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        499 <br>
+                                        499</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена ванны</td>
+                                    <td class="table__td">1 ванна</td>
+                                    <td class="table__td">3</td>
+                                    <td class="table__td">3067</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена унитаза <br>
+                                        - со смывным бачком типа "Компакт" <br> - с высокорасположенным смывным бачком
+                                    </td>
+                                    <td class="table__td">&nbsp; <br>
+                                        1 бачок <br>
+                                        1 бачок</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        2,39 <br>
+                                        2,79</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        2436 <br>
+                                        2844</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена высокорасположенного смывного бачка</td>
+                                    <td class="table__td">1 бачок</td>
+                                    <td class="table__td">1,05</td>
+                                    <td class="table__td">1071</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена смывной трубы высокорасп. бачка</td>
+                                    <td class="table__td">1 бачок</td>
+                                    <td class="table__td">1,17</td>
+                                    <td class="table__td">1194</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена смывного бачка типа "Компакт"</td>
+                                    <td class="table__td">1 бачок</td>
+                                    <td class="table__td">1</td>
+                                    <td class="table__td">1019</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена резиновых манжет унитаза, гофр <br> - при
+                                        высокорасположенном смыв. бачке <br> - при смывном бачке типа "Компакт"</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        1 манжет <br>
+                                        1 манжет</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        0,67 <br>
+                                        0,75</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        683 <br>
+                                        764</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Подключение стиральной машины <br>
+                                        (врезка в действующие сети трубопроводов водоснабжения прим. Ск = 0,7 (п. 2.7
+                                        таблица 2 Указаний к Е16-07-003-4)</td>
+                                    <td class="table__td">1 подключение</td>
+                                    <td class="table__td">2</td>
+                                    <td class="table__td">2039</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена полотенцесушителя <br>
+                                        (снятие полотенцесушителя из водогазопроводных труб, установка из латунных
+                                        хромированных, гидравлическое испытание (Е16-07-003-4, Е17-01-002-1,2)</td>
+                                    <td class="table__td">1 полотенцесушитель</td>
+                                    <td class="table__td">0,61</td>
+                                    <td class="table__td">622</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена кронштейнов под санитарн. приборами <br> - со смывным
+                                        бачком <br> - с умывальником</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        1 кроншт. <br>
+                                        1 кроншт.</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        0,72 <br>
+                                        0,53</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        734 <br>
+                                        540</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Врезка трубопровода в существующую сеть диаметром до 40 мм
+                                    </td>
+                                    <td class="table__td">1 врезка</td>
+                                    <td class="table__td">1</td>
+                                    <td class="table__td">1019</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена сгонов у трубопроводов диаметром до 25 мм</td>
+                                    <td class="table__td">1 сгон</td>
+                                    <td class="table__td">0,81</td>
+                                    <td class="table__td">825</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Замена нагревательных приборов весом до 80 кг. (демонтаж,
+                                        установка)</td>
+                                    <td class="table__td">1 прибор</td>
+                                    <td class="table__td">1,3</td>
+                                    <td class="table__td">1325</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Замена нагревательных приборов весом свыше 80 кг. (демонтаж,
+                                        установка)</td>
+                                    <td class="table__td">1 прибор</td>
+                                    <td class="table__td">1,78</td>
+                                    <td class="table__td">1815</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Добавление или снятие секций радиаторов (одной-двух крайних)
+                                    </td>
+                                    <td class="table__td">1 радиатор</td>
+                                    <td class="table__td">2,16</td>
+                                    <td class="table__td">2201</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Установка проходных вентилей диам. до 25 мм</td>
+                                    <td class="table__td">1 шт</td>
+                                    <td class="table__td">0,47</td>
+                                    <td class="table__td">479</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Установка проходных вентилей диам. до 50 мм</td>
+                                    <td class="table__td">1 шт</td>
+                                    <td class="table__td">0,9</td>
+                                    <td class="table__td">916</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Установка счетчика (водомера)</td>
+                                    <td class="table__td">1 счетчик (водомер)</td>
+                                    <td class="table__td">1,22</td>
+                                    <td class="table__td">1243</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Пломбировка счетчика (водомера)</td>
+                                    <td class="table__td">1 счетчик (водомер)</td>
+                                    <td class="table__td"></td>
+                                    <td class="table__td">207</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Замена гибких шлангов к смесителю</td>
+                                    <td class="table__td">1 шт</td>
+                                    <td class="table__td">0,33</td>
+                                    <td class="table__td">338</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Замена счетчика (водомера)</td>
+                                    <td class="table__td">1 счетчик (водомер)</td>
+                                    <td class="table__td">0,56</td>
+                                    <td class="table__td">566</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Замена фильтра для очистки воды, эксцентрик, обратный клапан
+                                    </td>
+                                    <td class="table__td">1 фильтр</td>
+                                    <td class="table__td">0,56</td>
+                                    <td class="table__td">566</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Сварочные работы</td>
+                                    <td class="table__td">1 см шва</td>
+                                    <td class="table__td">0,08</td>
+                                    <td class="table__td">85</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена трубопроводов канализации на полиэтиленовые трубы</td>
+                                    <td class="table__td">1 м</td>
+                                    <td class="table__td">0,58</td>
+                                    <td class="table__td">592</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена трубопроводов водоснабжения на полиэтиленовые трубы до Ø
+                                        25мм</td>
+                                    <td class="table__td">1 м</td>
+                                    <td class="table__td">1,29</td>
+                                    <td class="table__td">1317</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="ac ac_uslugi">
+                        <p class="ac-header ac-header_uslugi paragraph-reset">
+                            <button type="button" class="ac-trigger ac-trigger_uslugi">
+                                <div class="ac__img ac__img_2"></div>
+                                <span class="ac-trigger__text_uslugi">Плотницкие работы</span>
+                            </button>
+                        </p>
+                        <div class="ac-panel ac-panel_uslugi">
+                            <br>
+                            <div class="scroll_icon"></div>
+
+                            <table class="ac-text ac-text_uslugi table">
+                                <tr class="table__tr">
+                                    <th class="table__th table__column1">&nbsp;</th>
+                                    <th class="table__th table__column2">Ед.&nbsp;изм.</th>
+                                    <th class="table__th table__column3">Норма времени <br>на&nbsp;ед.&nbsp;изм. чел/час
+                                    </th>
+                                    <th class="table__th table__column4">Тариф руб.</th>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена створок оконных переплетов <br> - узкая одинарная
+                                        коробка для одного переплета <br> - то же со спаренными переплетами <br> -
+                                        широкая составная коробка</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        1 створка <br>
+                                        1 створка <br>
+                                        1 створка</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        0,6 <br>
+                                        0,66 <br>
+                                        0,73</td>
+                                    <td class="table__td">&nbsp; <br>
+                                        612 <br>
+                                        673 <br>
+                                        745</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Ремонт форточек</td>
+                                    <td class="table__td">1 форточка</td>
+                                    <td class="table__td">1</td>
+                                    <td class="table__td">1019</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Ремонт подоконных досок без снятия с места</td>
+                                    <td class="table__td">1 м щели</td>
+                                    <td class="table__td">0,5</td>
+                                    <td class="table__td">511</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена наличников оконных и дверных проемов <br> - петли
+                                        оконные дл. 100 мм при кол-ве петель <br>
+                                        <span style="float: right;">1 петля</span> <br>
+                                        <span style="float: right;">2 петли</span> <br>
+
+                                        - петли дверные при кол-ве петель <br>
+                                        <span style="float: right;">1 петля</span> <br>
+                                        &nbsp; <br>
+                                        <span style="float: right;">2 петли</span> <br>
+                                    </td>
+                                    <td class="table__td">&nbsp; <br> &nbsp; <br> 1 створка <br> 1 створка <br> &nbsp;
+                                        <br>
+                                        1 дверное полотно <br>
+                                        1 дверное полотно
+                                    </td>
+                                    <td class="table__td">&nbsp; <br> &nbsp; <br>
+                                        0,42 <br>
+                                        0,78 <br>
+                                        &nbsp; <br>
+
+                                        0,54 <br>
+                                        &nbsp; <br>
+                                        1
+                                    </td>
+                                    <td class="table__td">&nbsp; <br> &nbsp; <br>
+                                        430 <br>
+                                        795 <br>
+                                        &nbsp; <br>
+
+                                        552 <br>
+                                        &nbsp; <br>
+                                        1019
+                                    </td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Нашивка брусьев на дверные коробки</td>
+                                    <td class="table__td">1 м бруска</td>
+                                    <td class="table__td">0,14</td>
+                                    <td class="table__td">142</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена в квартире разбитых жильцами стекол оконных, по замазке
+                                        на штапиках</td>
+                                    <td class="table__td">м2</td>
+                                    <td class="table__td">0,49</td>
+                                    <td class="table__td">497</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена неисправного накладного или врезного замка</td>
+                                    <td class="table__td">1 шт</td>
+                                    <td class="table__td">0,58</td>
+                                    <td class="table__td">592</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена ручек дверных</td>
+                                    <td class="table__td">1 шт</td>
+                                    <td class="table__td">0,15</td>
+                                    <td class="table__td">154</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена ручек оконных</td>
+                                    <td class="table__td">1 шт</td>
+                                    <td class="table__td">0,22</td>
+                                    <td class="table__td">225</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Большой ремонт входных дверных полотен</td>
+                                    <td class="table__td">полотно</td>
+                                    <td class="table__td">5,52</td>
+                                    <td class="table__td">5628</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Большой ремонт дверной коробки</td>
+                                    <td class="table__td">коробка</td>
+                                    <td class="table__td">1,68</td>
+                                    <td class="table__td">1714</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Обивка дверей дермантином по войлоку</td>
+                                    <td class="table__td">м2</td>
+                                    <td class="table__td">0,71</td>
+                                    <td class="table__td">726</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена обивки дверей</td>
+                                    <td class="table__td">м2</td>
+                                    <td class="table__td">0,69</td>
+                                    <td class="table__td">704</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Врезка глазка во входную дверь</td>
+                                    <td class="table__td">1 шт</td>
+                                    <td class="table__td">0,30</td>
+                                    <td class="table__td">304</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Укрепление дверных и оконных коробок</td>
+                                    <td class="table__td">коробка</td>
+                                    <td class="table__td">1,16</td>
+                                    <td class="table__td">1183</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Сплачивание дощатых полов со вставкой реек в щели</td>
+                                    <td class="table__td">м2</td>
+                                    <td class="table__td">0,45</td>
+                                    <td class="table__td">459</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена досок в полах до 3 шт.</td>
+                                    <td class="table__td">м2</td>
+                                    <td class="table__td">0,59</td>
+                                    <td class="table__td">596</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Перестилка пола</td>
+                                    <td class="table__td">м2</td>
+                                    <td class="table__td">0,62</td>
+                                    <td class="table__td">633</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена пола с добавлением новых досок до 25%</td>
+                                    <td class="table__td">м2</td>
+                                    <td class="table__td">1,25</td>
+                                    <td class="table__td">1274</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Смена пола с добавлением новых досок до 50%</td>
+                                    <td class="table__td">м2</td>
+                                    <td class="table__td">1,46</td>
+                                    <td class="table__td">1488</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Настил линолеума</td>
+                                    <td class="table__td">м2</td>
+                                    <td class="table__td">0,42</td>
+                                    <td class="table__td">433</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="ac ac_uslugi">
+                        <p class="ac-header ac-header_uslugi paragraph-reset">
+                            <button type="button" class="ac-trigger ac-trigger_uslugi">
+                                <div class="ac__img ac__img_3"></div>
+                                <span class="ac-trigger__text_uslugi">Электро&shy;технические работы</span>
+                            </button>
+                        </p>
+                        <div class="ac-panel ac-panel_uslugi">
+                            <br>
+                            <div class="scroll_icon"></div>
+
+                            <table class="ac-text ac-text_uslugi table">
+                                <tr class="table__tr">
+                                    <th class="table__th table__column1">&nbsp;</th>
+                                    <th class="table__th table__column2">Ед.&nbsp;изм.</th>
+                                    <th class="table__th table__column3">Норма времени <br>на&nbsp;ед.&nbsp;изм. чел/час
+                                    </th>
+                                    <th class="table__th table__column4">Тариф руб.</th>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">
+                                        Замена неисправных участков электрической сети <br>
+                                        Число и сечение жил в проводе, кв. мм <br>
+                                        2 x 1,5; 2 x 2,5 <br>
+                                        3 x 1,5; 3 x 2,5
+                                    </td>
+                                    <td class="table__td">
+                                        &nbsp; <br>
+                                        &nbsp; <br>
+                                        1 м <br>
+                                        1 м
+                                    </td>
+                                    <td class="table__td">
+                                        &nbsp; <br>
+                                        &nbsp; <br>
+                                        0,2 <br>
+                                        0,25
+                                    </td>
+                                    <td class="table__td">
+                                        &nbsp; <br>
+                                        &nbsp; <br>
+                                        204 <br>
+                                        254
+                                    </td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Замена неисправного потолочного или стенного патрона</td>
+                                    <td class="table__td">1 патрон</td>
+                                    <td class="table__td">0,29</td>
+                                    <td class="table__td">298</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Замена вышедших из строя электроустановочных изделий
+                                        (выключатели, штепсельные розетки):</td>
+                                    <td class="table__td">1 прибор</td>
+                                    <td class="table__td">0,19</td>
+                                    <td class="table__td">194</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">
+                                        Замена светильников <br>
+                                        а) для ламп накаливания: <br>
+                                        б) для люминесцентных ламп:
+                                    </td>
+                                    <td class="table__td">
+                                        1 светильник (бра) <br>
+                                        &nbsp; <br>
+                                        &nbsp;
+                                    </td>
+                                    <td class="table__td">
+                                        &nbsp; <br>
+                                        0,46 <br>
+                                        0,5
+                                    </td>
+                                    <td class="table__td">
+                                        &nbsp; <br>
+                                        467 <br>
+                                        511
+                                    </td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Замена автоматических выключателей:</td>
+                                    <td class="table__td">1 выключатель</td>
+                                    <td class="table__td">1,06</td>
+                                    <td class="table__td">1079</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Прокладка провода скрытой проводки с пробивкой борозд</td>
+                                    <td class="table__td">1 м провода</td>
+                                    <td class="table__td">0,254</td>
+                                    <td class="table__td">260</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Прокладка провода открытой проводки</td>
+                                    <td class="table__td">1 м провода</td>
+                                    <td class="table__td">0,142</td>
+                                    <td class="table__td">144</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Соединение и прозвонка жил, ранее проложенных жил</td>
+                                    <td class="table__td">1 коробка</td>
+                                    <td class="table__td">0,3</td>
+                                    <td class="table__td">304</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Установка электрического звона и кнопки с прокладкой провода</td>
+                                    <td class="table__td">1 звонок</td>
+                                    <td class="table__td">0,27</td>
+                                    <td class="table__td">272</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Установка электрического звона и кнопки без прокладки провода</td>
+                                    <td class="table__td">1 звонок</td>
+                                    <td class="table__td">0,14</td>
+                                    <td class="table__td">142</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Демонтаж старой проводки</td>
+                                    <td class="table__td">1 м.п.</td>
+                                    <td class="table__td">0.0254</td>
+                                    <td class="table__td">26</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Замена штепсельного разъема (вилки и розетки)</td>
+                                    <td class="table__td">1 разъем</td>
+                                    <td class="table__td">0,5</td>
+                                    <td class="table__td">511</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Установка щитка для электросчетчика</td>
+                                    <td class="table__td">1 щиток</td>
+                                    <td class="table__td">1,21</td>
+                                    <td class="table__td">1234</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Сверление отверстий под счетчик</td>
+                                    <td class="table__td">1 отверстие</td>
+                                    <td class="table__td">0,11</td>
+                                    <td class="table__td">111</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Подключения электросчетчика после ограничений</td>
+                                    <td class="table__td">1 эл. счетчик</td>
+                                    <td class="table__td">1</td>
+                                    <td class="table__td">1005</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Установка однофазного электросчетчика на готовый щиток</td>
+                                    <td class="table__td">1 счетчик</td>
+                                    <td class="table__td">0,87</td>
+                                    <td class="table__td">737</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Замена перегоревшей электролампы. Снятие плафона (при необходимости). Вывертывание из патрона перегоревшей электролампы. Установка плафона (при необходимости) Проверка работы электролампы</td>
+                                    <td class="table__td">1 электролампа</td>
+                                    <td class="table__td">0,071</td>
+                                    <td class="table__td">74</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Установка розетки</td>
+                                    <td class="table__td">1 шт</td>
+                                    <td class="table__td">0,241</td>
+                                    <td class="table__td">245</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Установка выключателя</td>
+                                    <td class="table__td">1 шт</td>
+                                    <td class="table__td">0,241</td>
+                                    <td class="table__td">245</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Пробивка борозд в бетонных конструкциях полов и стен</td>
+                                    <td class="table__td">1 м</td>
+                                    <td class="table__td">0,28</td>
+                                    <td class="table__td">284</td>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Пробивка борозд в бетонных конструкциях потолков</td>
+                                    <td class="table__td">1 м</td>
+                                    <td class="table__td">0,462</td>
+                                    <td class="table__td">472</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="ac ac_uslugi">
+                        <p class="ac-header ac-header_uslugi paragraph-reset">
+                            <button type="button" class="ac-trigger ac-trigger_uslugi">
+                                <div class="ac__img ac__img_4"></div>
+                                <span class="ac-trigger__text_uslugi">Санитарная очистка</span>
+                            </button>
+                        </p>
+                        <div class="ac-panel ac-panel_uslugi">
+                            <br>
+                            <div class="scroll_icon"></div>
+
+                            <table class="ac-text ac-text_uslugi table">
+                                <tr class="table__tr">
+                                    <th class="table__th table__column1">&nbsp;</th>
+                                    <th class="table__th table__column2">Ед.&nbsp;изм.</th>
+                                    <th class="table__th table__column3">Норма времени <br>на&nbsp;ед.&nbsp;изм. чел/час
+                                    </th>
+                                    <th class="table__th table__column4">Тариф руб.</th>
+                                </tr>
+                                <tr class="table__tr">
+                                    <td class="table__td">Вывоз крупногабаритных отходов (строительный мусор)</td>
+                                    <td class="table__td">1 м3</td>
+                                    <td class="table__td"></td>
+                                    <td class="table__td">891</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer bg-grey">
+            <div class="footer__wrapper">
+                <img class="footer__ellipse_big" src="img/Ellipse_footer_big.png" alt="">
+                <!-- десктоп -->
+                <div class="footer_desktop">
+                    <div class="footer__basic basic">
+                        <a href="index.html"><img class="footer__logo" src="img/Logo.svg" alt="logo"></a>
+                        <p class="paragraph-reset basic__address">
+                            Управляющая компания <br>п.Беркакит
+                        </p>
+                        <div class="basic__tel">
+                            <img src="img/icon-phone-ring.svg" alt="">
+                            <a href="tel:+74114772300">+7 41147 7-23-00</a>
+                        </div>
+                        <p class="paragraph-reset basic__schedule">
+                            понедельник – пятница
+                            <br>с 9.00 до 17.00
+                        </p>
+                    </div>
+                    <div class="footer_clients fclient">
+                        <p class="paragraph-reset ftitle fclient__title">
+                            Клиентам
+                        </p>
+                        <ul class="list-reset flist fclient__list">
+                            <li class="fclient__item fitem fclient__item_active">
+                                <a href="index.html#block_pay">Оплата счета</a>
+                            </li>
+                            <li class="fclient__item fitem">
+                                <a href="form.html">Форма для заявок</a>
+                            </li>
+                            <li class="fclient__item fitem">
+                                <a href="index.html#block_uslugi">Каталог услуг</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_company company">
+                        <p class="paragraph-reset ftitle company__title">
+                            Компания
+                        </p>
+                        <ul class="list-reset flist company__list">
+                            <li class="company__item fitem">
+                                <a href="about.html">О компании</a>
+                            </li>
+                            <li class="company__item fitem">
+                                <a href="#">Документы</a>
+                            </li>
+                            <li class="company__item fitem">
+                                <a href="contacts.html">Контакты</a>
+                            </li>
+                            <li class="company__item fitem">
+                                <a href="requisites.html">Реквизиты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_contact fcontact">
+                        <p class="paragraph-reset ftitle fcontact__title">
+                            Связаться с нами
+                        </p>
+                        <div class="fcontact__icons ficons">
+                            <div class="ficons__image ficons__image_mail">
+                                <a href="mailto:ultraservis08@yandex.ru"><img class="ficons__img"
+                                        src="img/icon-letter.svg" alt=""></a>
+                            </div>
+                            <div class="ficons__image">
+                                <a href="tel:+74114772300"><img class="ficons__img" src="img/icon-phone.svg" alt=""></a>
+                            </div>
+                            <div class="ficons__image">
+                                <a href="#"><img class="ficons__img" src="img/icon-telegram.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <p class="paragraph-reset fcontact__copy">
+                            &copy;&nbsp;2024&nbsp;Ультрасервис.
+                        </p>
+                    </div>
+                </div>
+
+                <img class="footer__ellipse_small" src="img/Ellipse_footer_small.png" alt="">
+
+                <!-- мобайл -->
+                <div class="accordion-container footer_mobile">
+                    <div class="footer__basic basic footer__basic_mobile">
+                        <img class="footer__logo" src="img/Logo.svg" alt="logo">
+                        <p class="paragraph-reset basic__address">
+                            Управляющая компания <br>п.Беркакит
+                        </p>
+                        <div class="basic__tel">
+                            <img src="img/icon-phone-ring.svg" alt="">
+                            <a href="tel:+74114772300">+7 41147 7-23-00</a>
+                        </div>
+                        <p class="paragraph-reset basic__schedule">
+                            понедельник – пятница
+                            <br>с 9.00 до 17.00
+                        </p>
+                    </div>
+
+                    <div class="ac ac_footer">
+                        <p class="ac-header ac-header_footer paragraph-reset ftitle fcontact__title">
+                            <button type="button" class="ac-trigger ac-trigger_footer">Клиентам</button>
+                        </p>
+                        <div class="ac-panel ac-panel_footer">
+                            <ul class="ac-text ac-text_footer list-reset flist fclient__list">
+                                <li class="fclient__item fitem fclient__item_active">
+                                    <a href="index.html#block_pay">Оплата счета</a>
+                                </li>
+                                <li class="fclient__item fitem">
+                                    <a href="form.html">Форма для заявок</a>
+                                </li>
+                                <li class="fclient__item fitem">
+                                    <a href="index.html#block_uslugi">Каталог услуг</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ac ac_footer">
+                        <p class="ac-header ac-header_footer paragraph-reset ftitle fcontact__title">
+                            <button type="button" class="ac-trigger ac-trigger_footer">Компания</button>
+                        </p>
+                        <div class="ac-panel ac-panel_footer">
+                            <ul class="ac-text ac-text_footer list-reset flist company__list">
+                                <li class="company__item fitem">
+                                    <a href="about.html">О компании</a>
+                                </li>
+                                <li class="company__item fitem">
+                                    <a href="#">Документы</a>
+                                </li>
+                                <li class="company__item fitem">
+                                    <a href="contacts.html">Контакты</a>
+                                </li>
+                                <li class="company__item fitem">
+                                    <a href="requisites.html">Реквизиты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer_contact fcontact footer_contact_mobile">
+                        <div class="fcontact__icons ficons">
+                            <div class="ficons__image ficons__image_mail">
+                                <a href="mailto:ultraservis08@yandex.ru"><img class="ficons__img"
+                                        src="img/icon-letter.svg" alt=""></a>
+                            </div>
+                            <div class="ficons__image">
+                                <a href="tel:+74114772300"><img class="ficons__img" src="img/icon-phone.svg" alt=""></a>
+                            </div>
+                            <div class="ficons__image">
+                                <a href="#"><img class="ficons__img" src="img/icon-telegram.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <p class="paragraph-reset fcontact__copy">
+                            &copy;&nbsp;2025&nbsp;Ультрасервис.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/accordion-js@3.4.0/dist/accordion.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script src="script/script_main.js"></script>
+</body>
+
+</html>

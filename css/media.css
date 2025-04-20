@@ -1,0 +1,497 @@
+/* basic */
+:root {
+  --color-back: #f7fafa;
+  --color-back-white: #fff;
+  --color-back-green: #2bae89;
+  --color-back-green-light: #f4fbf9;
+
+  --text-main: #111928;
+  --text-main-white: #fff;
+  --text-secondary: #637381;
+
+  --size-margin: 24px;
+}
+
+@media (min-width: 1536px) {
+  .container {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 1700px) {
+  .hero__title {
+    font-size: 38px;
+  }
+
+  .advantages__title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .header {
+    padding: 20px 30px;
+  }
+
+  .nav__list {
+    gap: 15px;
+  }
+
+  .hero__text {
+    padding: 30px 50px 35px 30px;
+  }
+
+  .hero__title {
+    font-size: 30px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  .header__btn {
+    padding: 9px 24px;
+    font-size: 16px;
+  }
+
+  .advantages {
+    padding: 40px 35px;
+  }
+
+  .advantages__title {
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 100%;
+  }
+
+  .advantages__descr {
+    font-size: 16px;
+  }
+
+  .feedback__form {
+    padding: 50px;
+  }
+
+  .feedback__contacts {
+    padding: 50px;
+  }
+
+  .uslugi {
+    padding: 60px 70px;
+  }
+
+  .col-xxl-4 {
+    width: calc((100% - (30px * 1)) / 2);
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+
+  .footer {
+    padding: 60px 70px;
+  }
+
+  /* СТР О НАС */
+  .advantages__descr_aabout {
+    max-width: 200px;
+  }
+
+  /* СТР ФОРМА */
+  .fform {
+    padding-right: 200px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .body__container {
+    padding: 0 5%;
+  }
+
+  .popup {
+    top: 3%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    position: relative;
+  }
+
+  .header__btn_burger,
+  .header__nav_close {
+    display: block;
+  }
+
+  .header__nav {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 15px 30px;
+    padding-bottom: 30px;
+    width: 200px;
+    background-color: var(--color-back-green-light);
+    border-radius: 24px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 100;
+  }
+
+  .header__nav.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .header__nav_close {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .col-lg-7 {
+    width: 100%;
+  }
+
+  .hero__image {
+    display: none;
+  }
+
+  .hero__title {
+    margin-bottom: 24px;
+  }
+
+  .advantages {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .advantages__title,
+  .advantages__descr {
+    text-align: left;
+  }
+
+  .col-lg-12 {
+    width: 100%;
+  }
+
+  .uslugi {
+    padding: 50px;
+  }
+
+  .table__column1 {
+    width: 45%;
+  }
+
+  .table__column2 {
+    width: 15%;
+  }
+
+  .table__column3 {
+    width: 30%;
+  }
+
+  .table__column4 {
+    width: 10%;
+  }
+
+  /* КОНТАКТЫ */
+  .table__column1_cinfo {
+    width: 30%;
+  }
+
+  .table__column2_cinfo,
+  .table__column3_cinfo {
+    width: 35%;
+  }
+
+  /* РЕКВИЗИТЫ */
+  .rhero {
+    padding: 40px 35px;
+  }
+
+  #ac-trigger-2,
+  #ac-trigger-3,
+  #ac-trigger-4,
+  #ac-trigger-5 {
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  .ac-trigger__text_uslugi {
+    width: calc(100% - 190px);
+  }
+
+  .footer_desktop {
+    display: none;
+  }
+
+  .footer_mobile {
+    display: block;
+  }
+
+  .footer {
+    padding: 30px 40px;
+  }
+
+  .footer__basic {
+    margin-bottom: var(--size-margin);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .footer_contact_mobile {
+    margin-top: var(--size-margin);
+  }
+
+  .ac {
+    border: none;
+    border-radius: 20px;
+  }
+
+  .ac .ac-header {
+    padding: 15px 25px;
+  }
+
+  .ac .ac-trigger {
+    font: 600 18px Inter, sans-serif;
+    color: var(--text-main);
+  }
+
+  .ac .ac-trigger::after {
+    right: 20px;
+    color: var(--color-back-green);
+  }
+
+  .ac .ac-panel .ac-text {
+    padding: 15px 20px;
+    font: 400 16px Inter, sans-serif;
+    color: var(--text-secondary);
+  }
+
+  .fcontact__copy {
+    margin-top: var(--size-margin);
+  }
+
+  /* uslugi */
+  .ac .ac-header_uslugi {
+    padding: 15px 10px;
+  }
+
+  .ac-trigger__text_uslugi {
+    width: calc(100% - 170px);
+  }
+
+  .ac .ac-trigger_uslugi::after {
+    right: 0;
+  }
+
+  /* СТР О НАС */
+  .ahero {
+    padding: 40px 35px;
+  }
+
+  .advantages__descr_aabout {
+    max-width: 100%;
+  }
+
+  .acontacts {
+    width: 100%;
+  }
+
+  .aschedule {
+    width: 100%;
+  }
+
+  /* ФОРМА */
+  .fform__fields {
+    padding: 30px 40px;
+  }
+
+  .fform {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .popup {
+    padding: 80px 40px;
+    top: 2%;
+    left: calc((100% - 400px) / 2);
+    width: 400px;
+  }
+
+  .col-xxl-4 {
+    width: 100%;
+  }
+
+  .table__column1 {
+    width: 40%;
+  }
+
+  .table__column2 {
+    width: 20%;
+  }
+
+  .table__column3 {
+    width: 25%;
+  }
+
+  .table__column4 {
+    width: 15%;
+  }
+
+  /* КОНТАКТЫ */
+  .table__column1_cinfo {
+    width: 30%;
+  }
+
+  .table__column2_cinfo,
+  .table__column3_cinfo {
+    width: 35%;
+  }
+}
+
+@media (max-width: 700px) {
+  .table__column1 {
+    width: 196px;
+  }
+
+  .table__column2 {
+    width: 98px;
+  }
+
+  .table__column3 {
+    width: 122px;
+  }
+
+  .table__column4 {
+    width: 74px;
+  }
+
+  /* КОНТАКТЫ */
+  .table__column1_cinfo {
+    width: 30%;
+  }
+
+  .table__column2_cinfo,
+  .table__column3_cinfo {
+    width: 35%;
+  }
+
+  #ac-trigger-2,
+  #ac-trigger-3,
+  #ac-trigger-4,
+  #ac-trigger-5 {
+    font-size: 16px;
+  }
+
+  /* ФОРМА */
+  .form__group_half {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .body__container {
+    padding: 0 15px;
+  }
+
+  .popup {
+    padding: 60px 25px;
+    left: calc((100% - 300px) / 2);
+    width: 300px;
+  }
+
+  .header__btn {
+    padding: 8px 15px;
+    max-width: 140px;
+  }
+
+  .scroll_icon {
+    margin-bottom: 12px;
+    height: 50px;
+    background-image: url("/img/icon-horizontal-scroll-50.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .ac__img {
+    margin-right: 15px;
+  }
+
+  .ac .ac-header {
+    padding: 10px 15px;
+  }
+
+  /* СТР О НАС */
+  .ahero__title {
+    font-size: 34px;
+  }
+
+  .acontacts,
+  .aschedule {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 470px) {
+  .header__button {
+    flex-basis: 100%;
+  }
+
+  .header__btn {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .ac .ac-header_uslugi {
+    height: 170px;
+  }
+
+  .ac #ac-trigger-2::after,
+  .ac #ac-trigger-3::after,
+  .ac #ac-trigger-4::after,
+  .ac #ac-trigger-5::after {
+    top: 170%;
+    width: 100%;
+    height: 50px;
+  }
+
+  .ac-trigger__text_uslugi {
+    width: calc(100% - 100px);
+  }
+
+  .footer__basic {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .feedback__form,
+  .feedback__contacts,
+  .uslugi,
+  .footer {
+    padding: 40px 30px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}

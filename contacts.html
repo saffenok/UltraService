@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ультрасервис - Контакты</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.4.0/dist/accordion.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body class="body">
+    <div class="dark__wrapper"></div>
+    <div class="body__container">
+
+        <header class="header">
+            <!-- burger menu -->
+            <button class="header__btn_burger">
+                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="2" fill="#637381" />
+                    <rect y="8" width="20" height="2" fill="#637381" />
+                    <rect y="16" width="20" height="2" fill="#637381" />
+                </svg>
+            </button>
+
+            <div class="header__logo">
+                <a href="index.html"><img src="img/Logo.svg" alt="logo"></a>
+            </div>
+            <nav class="header__nav nav">
+                <!-- burger close -->
+                <button class="header__nav_close">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.09094" width="29.5699" height="2" transform="rotate(45 2.09094 0)" fill="#637381" />
+                        <rect y="20.9092" width="29.5699" height="2" transform="rotate(-45 0 20.9092)" fill="#637381" />
+                    </svg>
+                </button>
+
+                <ul class="list-reset nav__list">
+                    <li class="nav__item nav__item_active">
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#block_pay">Оплата</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="form.html">Обратная связь</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#block_uslugi">Услуги</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- кнопка для неавторизованнных -->
+            <div class="header__button">
+                <a class="btn header__btn">Вход/Регистрация</a>
+            </div>
+
+            <!-- кнопка для авторизованных -->
+            <div class="header__button_lk">
+                <a class="btn btn_light header__btn_lk" href="">username</a>
+            </div>
+        </header>
+
+        <!-- форма входа попап-->
+        <div class="popup popup_login login">
+            <img class="popup__dot popup__dot_top" src="img/Dotted_Shape.svg" alt="">
+
+            <div class="popup__content">
+                <img class="popup__logo" src="img/Logo.svg" alt="logo">
+                <form action="" class="popup__form">
+                    <input class="popup__input" type="" placeholder="Электронная почта или Лицевой счет">
+                    <div class="popup__wrapper_pass">
+                        <input class="popup__input popup__input_pass" type="password" placeholder="Пароль">
+                        <a class="popup__eye" href="">
+                            <svg class="popup__icon" width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.01067 3.06221L5.0205 3.05828L5.03016 3.05393C5.97103 2.63054 6.97639 2.39797 7.99998 2.39797C10.304 2.39797 12.0362 3.48909 13.2216 4.6328C14.4065 5.77604 15.0136 6.9436 15.0524 7.02092C15.0526 7.02144 15.0533 7.02335 15.0541 7.02675C15.0553 7.03226 15.0562 7.03959 15.0562 7.04797C15.0562 7.05635 15.0553 7.06369 15.0541 7.0692C15.0536 7.07109 15.0532 7.07252 15.0529 7.07351C15.0482 7.08188 15.043 7.09109 15.0374 7.10111C14.8208 7.48563 13.933 9.06198 12.2358 10.2651L12.2013 10.2895L12.1714 10.3194L12.1464 10.3444L12.1214 10.3694L11.7679 10.723L12.1214 11.0765L13.6964 12.6515C13.715 12.6701 13.7187 12.6866 13.7187 12.698C13.7187 12.7094 13.715 12.7259 13.6964 12.7444L13.6768 12.764L13.6708 12.7715C13.6663 12.7722 13.6602 12.7728 13.6527 12.773C13.6509 12.7726 13.646 12.7714 13.6381 12.7678C13.6237 12.7612 13.6109 12.7518 13.6035 12.7444L13.6031 12.744L2.27853 1.44442C2.27849 1.44438 2.27845 1.44434 2.27841 1.4443C2.25996 1.4258 2.25623 1.40935 2.25623 1.39797C2.25623 1.38657 2.25998 1.37008 2.27853 1.35153C2.29708 1.33298 2.31357 1.32922 2.32498 1.32922C2.33638 1.32922 2.35287 1.33298 2.37142 1.35153L4.14642 3.12653L4.45306 3.43316L4.79998 3.17297C4.85264 3.13348 4.90927 3.10277 5.01067 3.06221ZM8.62142 7.57653L9.47498 8.43008V8.42933L9.48918 8.44414L11.2642 10.2941L11.6176 10.6625L11.9785 10.3016C11.977 10.303 11.9846 10.2956 12.0097 10.2773C12.0343 10.2594 12.063 10.2402 12.1023 10.214L12.1094 10.2093L12.1163 10.2043C13.5226 9.19608 14.3894 7.87837 14.7251 7.33615L14.8848 7.0782L14.7297 6.81744C14.4384 6.32741 13.73 5.26442 12.61 4.31902C11.487 3.37112 9.92687 2.52297 7.94998 2.52297C6.94917 2.52297 6.00165 2.74018 5.08708 3.17056L4.43804 3.47599L4.94917 3.97926L6.57417 5.57926L6.82888 5.83004L6.85958 5.81469L7.47142 6.42653L8.62142 7.57653ZM9.47498 7.73099V7.24761C9.47567 7.24407 9.47657 7.2395 9.47777 7.23353L9.47825 7.2311C9.48107 7.21706 9.48597 7.19258 9.48995 7.16736C9.49402 7.14159 9.49998 7.09824 9.49998 7.04797C9.49998 6.22183 8.82612 5.54797 7.99998 5.54797C7.94971 5.54797 7.90635 5.55393 7.88059 5.558C7.85539 5.56198 7.83093 5.56688 7.81688 5.56969L7.81442 5.57018C7.80845 5.57138 7.80388 5.57228 7.80034 5.57297H7.36667C7.40633 5.55757 7.44691 5.54298 7.4904 5.52825L7.57124 5.50804L7.57933 5.50602L7.58734 5.50374C7.71349 5.46769 7.86689 5.44797 7.99998 5.44797C8.89883 5.44797 9.62498 6.17412 9.62498 7.07297C9.62498 7.23579 9.60405 7.39405 9.55843 7.51806C9.54123 7.56116 9.5268 7.59865 9.51397 7.63196C9.49946 7.66965 9.48701 7.70198 9.47498 7.73099ZM7.7884 5.57519C7.78737 5.57535 7.78766 5.57527 7.78913 5.57507L7.7884 5.57519ZM9.47276 7.25955C9.4728 7.25932 9.47284 7.25908 9.47288 7.25882L9.47276 7.25955Z"
+                                    fill="#6B7280" stroke="#6B7280" />
+                                <path
+                                    d="M1.06908 7.04929L1.21901 6.79441C1.4508 6.40036 1.93301 5.68155 2.65209 4.93529L2.5624 4.83981C2.09128 5.33119 1.72039 5.81469 1.45225 6.20361C1.2864 6.44417 1.1608 6.64718 1.07595 6.79153C1.03355 6.86367 1.00141 6.921 0.979612 6.96086C0.959949 6.99681 0.949412 7.01722 0.947491 7.02095C0.947264 7.02156 0.946605 7.02345 0.945882 7.0267C0.944658 7.03221 0.943726 7.03954 0.943726 7.04792C0.943726 7.0563 0.944658 7.06364 0.945882 7.06915L1.06908 7.04929ZM1.06908 7.04929L1.22021 7.30346C1.51158 7.79349 2.21997 8.85648 3.33996 9.80188C4.46291 10.7498 6.02308 11.5979 7.99997 11.5979C8.45908 11.5979 8.9124 11.54 9.34824 11.4477L9.37844 11.5559M1.06908 7.04929L9.37844 11.5559M9.37844 11.5559C8.92238 11.6478 8.45979 11.6979 7.99997 11.6979C5.69595 11.6979 3.9638 10.6068 2.77839 9.4631C1.59347 8.31985 0.986312 7.1523 0.94752 7.07498L9.37844 11.5559Z"
+                                    fill="#6B7280" stroke="#6B7280" />
+                            </svg>
+                        </a>
+                    </div>
+                    <a class="btn popup__btn popup__btn_login">Войти</a>
+                </form>
+                <a class="popup__forgetpass" href="#">
+                    Забыли пароль?
+                </a>
+                <p class="paragraph-reset popup__reg">
+                    Нет аккаунта? <a class="popup__link popup__link_signup">Регистрация</a>
+                </p>
+            </div>
+
+            <img class="popup__dot popup__dot_bottom" src="img/Dotted_Shape.svg" alt="">
+        </div>
+
+        <!-- форма регистрации попап -->
+        <div class="popup popup_signup signup">
+            <img class="popup__dot popup__dot_top" src="img/Dotted_Shape.svg" alt="">
+
+            <div class="popup__content">
+                <img class="popup__logo" src="img/Logo.svg" alt="logo">
+                <form action="" class="popup__form form_signup">
+                    <fieldset class="form__group">
+                        <legend class="form__legend">
+                            Номер <a class="popup__tooltip" id="popup__tooltip">лицевого счета&nbsp;<svg
+                                    class="popup__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.9697 6.09064H9.93939C9.57576 6.09064 9.24242 6.39367 9.24242 6.78761C9.24242 7.18155 9.54545 7.48458 9.93939 7.48458H9.9697C10.3333 7.48458 10.6667 7.18155 10.6667 6.78761C10.6667 6.39367 10.3636 6.09064 9.9697 6.09064Z"
+                                        fill="#2BAE89" />
+                                    <path
+                                        d="M9.9697 8.48444C9.60606 8.48444 9.27273 8.78747 9.27273 9.18141V13.8481C9.27273 14.2117 9.57576 14.545 9.9697 14.545C10.3333 14.545 10.6667 14.242 10.6667 13.8481V9.1511C10.6667 8.78747 10.3636 8.48444 9.9697 8.48444Z"
+                                        fill="#2BAE89" />
+                                    <path
+                                        d="M9.9697 0.848145C4.90909 0.848145 0.787879 4.93905 0.787879 9.99966C0.787879 15.0603 4.90909 19.1815 9.9697 19.1815C15.0303 19.1815 19.1212 15.0603 19.1212 9.99966C19.1212 4.93905 15.0303 0.848145 9.9697 0.848145ZM9.9697 17.8178C5.66667 17.8178 2.15152 14.3027 2.15152 9.99966C2.15152 5.69663 5.66667 2.18148 9.9697 2.18148C14.2727 2.18148 17.7576 5.69663 17.7576 9.99966C17.7576 14.3027 14.2727 17.8178 9.9697 17.8178Z"
+                                        fill="#2BAE89" />
+                                </svg>
+                            </a>
+                        </legend>
+                        <input class="popup__input" type="number" placeholder="Введите номер лицевого счета">
+                    </fieldset>
+                    <fieldset class="form__group">
+                        <legend class="form__legend">
+                            Электронная почта
+                        </legend>
+                        <input class="popup__input" type="email" placeholder="Введите электронную почту">
+                    </fieldset>
+                    <fieldset class="form__group">
+                        <legend class="form__legend">
+                            Пароль
+                        </legend>
+                        <input class="popup__input" type="password" placeholder="Введите пароль">
+                    </fieldset>
+                    <fieldset class="form__group">
+                        <legend class="form__legend">
+                            Повторите пароль
+                        </legend>
+                        <input class="popup__input" type="password" placeholder="Введите пароль">
+                    </fieldset>
+
+                    <a class="btn popup__btn popup__btn_signup">Зарегистрироваться</a>
+                </form>
+                <p class="paragraph-reset popup__konf">
+                    Продолжая вы даете <a class="popup__link" href="#">согласие на обработку персональных данных</a>
+                </p>
+                <p class="paragraph-reset popup__reg">
+                    Есть аккаунт? <a class="popup__link popup__link_login">Войти</a>
+                </p>
+            </div>
+
+            <img class="popup__dot popup__dot_bottom" src="img/Dotted_Shape.svg" alt="">
+        </div>
+
+        <!-- c в начале названия класса - contacts -->
+        <main class="main ccontacts">
+            <section class="ccontacts__hero chero">
+                <p class="paragraph-reset chero__pretitle pretitle">
+                    Контакты
+                </p>
+                <h2 class="head-reset chero__title title">
+                    ООО УК «Ультра Сервис»
+                </h2>
+                <div class="chero__icons cicons">
+                    <div class="contacts__items items">
+                        <div class="items__yuraddress item">
+                            <div class="items__image">
+                                <img class="items__img" src="img/icon-mailbox.svg" alt="">
+                            </div>
+                            <div class="items__text">
+                                <p class="paragraph-reset items__title">
+                                    Юридический адрес
+                                </p>
+                                <p class="paragraph-reset items__descr">
+                                    Саха /Якутия/ Респ, р-н. Нерюнгринский, п.&nbsp;Беркакит, ул. Бочкарева, д.&nbsp;7
+                                </p>
+                            </div>
+                        </div>
+                        <div class="items__address item">
+                            <div class="items__image">
+                                <img class="items__img" src="img/icon-house.svg" alt="">
+                            </div>
+                            <div class="items__text">
+                                <p class="paragraph-reset items__title">
+                                    Фактический адрес
+                                </p>
+                                <p class="paragraph-reset items__descr">
+                                    Саха /Якутия/ Респ, р-н. Нерюнгринский, п.&nbsp;Беркакит, ул. Бочкарева, д.&nbsp;7
+                                </p>
+                            </div>
+                        </div>
+                        <div class="items__tel item">
+                            <div class="items__image">
+                                <img class="items__img" src="img/icon-phone-ring.svg" alt="">
+                            </div>
+                            <div class="items__text">
+                                <p class="paragraph-reset items__title">
+                                    Телефон
+                                </p>
+                                <p class="paragraph-reset items__descr">
+                                    <a href="tel:+74114772300">+7 41147 7-23-00</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="items__email item">
+                            <div class="items__image">
+                                <img class="items__img" src="img/icon-email.svg" alt="">
+                            </div>
+                            <div class="items__text">
+                                <p class="paragraph-reset items__title">
+                                    Электронная почта
+                                </p>
+                                <p class="paragraph-reset items__descr">
+                                    <a href="mailto:ultraservis08@yandex.ru">ultraservis08@yandex.ru</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="items__director item">
+                            <div class="items__image">
+                                <img class="items__img" src="img/icon-user.svg" alt="">
+                            </div>
+                            <div class="items__text">
+                                <p class="paragraph-reset items__title">
+                                    Директор
+                                </p>
+                                <p class="paragraph-reset items__descr">
+                                    Орехов Максим Валерьевич
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ccontacts__mode cmode">
+                <h2 class="head-reset cmode__title">
+                    Режим работы
+                </h2>
+                <div class="main__info info cinfo">
+                    <section class="info__contacts contacts acontacts cinfo__office">
+                        <h3 class="head-reset cinfo__title">
+                            Офис
+                        </h3>
+                        <table class="cinfo__table table">
+                            <tr class="table__tr">
+                                <th class="table__th table__column1 table__column1_cinfo">Дни недели</th>
+                                <th class="table__th table__column2 table__column2_cinfo">Режим работы </th>
+                                <th class="table__th table__column3 table__column3_cinfo">Перерыв</th>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Понедельник</td>
+                                <td class="table__td table__td_cinfo">&nbsp;9:00 - 17:00</td>
+                                <td class="table__td table__td_cinfo">13:00 - 14:00</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Вторник</td>
+                                <td class="table__td table__td_cinfo">&nbsp;9:00 - 17:00</td>
+                                <td class="table__td table__td_cinfo">13:00 - 14:00</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Среда</td>
+                                <td class="table__td table__td_cinfo">&nbsp;9:00 - 17:00</td>
+                                <td class="table__td table__td_cinfo">13:00 - 14:00</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Четверг</td>
+                                <td class="table__td table__td_cinfo">&nbsp;9:00 - 17:00</td>
+                                <td class="table__td table__td_cinfo">13:00 - 14:00</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Пятница</td>
+                                <td class="table__td table__td_cinfo">&nbsp;9:00 - 17:00</td>
+                                <td class="table__td table__td_cinfo">13:00 - 14:00</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Суббота</td>
+                                <td class="table__td table__td_cinfo">Выходной</td>
+                                <td class="table__td table__td_cinfo">&nbsp;</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Воскресенье</td>
+                                <td class="table__td table__td_cinfo">Выходной</td>
+                                <td class="table__td table__td_cinfo">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="info__schedule aschedule cinfo__cashbox">
+                        <h3 class="head-reset cinfo__title">
+                            Касса по приему платежей
+                        </h3>
+                        <table class="cinfo__table table">
+                            <tr class="table__tr">
+                                <th class="table__th table__column1 table__column1_cinfo">Дни недели</th>
+                                <th class="table__th table__column2 table__column2_cinfo">Режим работы </th>
+                                <th class="table__th table__column3 table__column3_cinfo">Перерыв</th>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Понедельник</td>
+                                <td class="table__td table__td_cinfo">Выходной</td>
+                                <td class="table__td table__td_cinfo">&nbsp;</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Вторник</td>
+                                <td class="table__td table__td_cinfo">10:00 - 16:00</td>
+                                <td class="table__td table__td_cinfo">13:00 - 14:00</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Среда</td>
+                                <td class="table__td table__td_cinfo">10:00 - 16:00</td>
+                                <td class="table__td table__td_cinfo">13:00 - 14:00</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Четверг</td>
+                                <td class="table__td table__td_cinfo">10:00 - 16:00</td>
+                                <td class="table__td table__td_cinfo">13:00 - 14:00</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Пятница</td>
+                                <td class="table__td table__td_cinfo">10:00 - 16:00</td>
+                                <td class="table__td table__td_cinfo">13:00 - 14:00</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Суббота</td>
+                                <td class="table__td table__td_cinfo">10:00 - 14:00</td>
+                                <td class="table__td table__td_cinfo">&nbsp;</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td table__td_cinfo">Воскресенье</td>
+                                <td class="table__td table__td_cinfo">Выходной</td>
+                                <td class="table__td table__td_cinfo">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer bg-grey">
+            <div class="footer__wrapper">
+                <img class="footer__ellipse_big" src="img/Ellipse_footer_big.png" alt="">
+                <!-- десктоп -->
+                <div class="footer_desktop">
+                    <div class="footer__basic basic">
+                        <a href="index.html"><img class="footer__logo" src="img/Logo.svg" alt="logo"></a>
+                        <p class="paragraph-reset basic__address">
+                            Управляющая компания <br>п.Беркакит
+                        </p>
+                        <div class="basic__tel">
+                            <img src="img/icon-phone-ring.svg" alt="">
+                            <a href="tel:+74114772300">+7 41147 7-23-00</a>
+                        </div>
+                        <p class="paragraph-reset basic__schedule">
+                            понедельник – пятница
+                            <br>с 9.00 до 17.00
+                        </p>
+                    </div>
+                    <div class="footer_clients fclient">
+                        <p class="paragraph-reset ftitle fclient__title">
+                            Клиентам
+                        </p>
+                        <ul class="list-reset flist fclient__list">
+                            <li class="fclient__item fitem fclient__item_active">
+                                <a href="index.html#block_pay">Оплата счета</a>
+                            </li>
+                            <li class="fclient__item fitem">
+                                <a href="form.html">Форма для заявок</a>
+                            </li>
+                            <li class="fclient__item fitem">
+                                <a href="index.html#block_uslugi">Каталог услуг</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_company company">
+                        <p class="paragraph-reset ftitle company__title">
+                            Компания
+                        </p>
+                        <ul class="list-reset flist company__list">
+                            <li class="company__item fitem">
+                                <a href="about.html">О компании</a>
+                            </li>
+                            <li class="company__item fitem">
+                                <a href="#">Документы</a>
+                            </li>
+                            <li class="company__item fitem">
+                                <a href="contacts.html">Контакты</a>
+                            </li>
+                            <li class="company__item fitem">
+                                <a href="requisites.html">Реквизиты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_contact fcontact">
+                        <p class="paragraph-reset ftitle fcontact__title">
+                            Связаться с нами
+                        </p>
+                        <div class="fcontact__icons ficons">
+                            <div class="ficons__image ficons__image_mail">
+                                <a href="mailto:ultraservis08@yandex.ru"><img class="ficons__img"
+                                        src="img/icon-letter.svg" alt=""></a>
+                            </div>
+                            <div class="ficons__image">
+                                <a href="tel:+74114772300"><img class="ficons__img" src="img/icon-phone.svg" alt=""></a>
+                            </div>
+                            <div class="ficons__image">
+                                <a href="#"><img class="ficons__img" src="img/icon-telegram.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <p class="paragraph-reset fcontact__copy">
+                            &copy;&nbsp;2024&nbsp;Ультрасервис.
+                        </p>
+                    </div>
+                </div>
+
+                <img class="footer__ellipse_small" src="img/Ellipse_footer_small.png" alt="">
+
+                <!-- мобайл -->
+                <div class="accordion-container footer_mobile">
+                    <div class="footer__basic basic footer__basic_mobile">
+                        <img class="footer__logo" src="img/Logo.svg" alt="logo">
+                        <p class="paragraph-reset basic__address">
+                            Управляющая компания <br>п.Беркакит
+                        </p>
+                        <div class="basic__tel">
+                            <img src="img/icon-phone-ring.svg" alt="">
+                            <a href="tel:+74114772300">+7 41147 7-23-00</a>
+                        </div>
+                        <p class="paragraph-reset basic__schedule">
+                            понедельник – пятница
+                            <br>с 9.00 до 17.00
+                        </p>
+                    </div>
+
+                    <div class="ac ac_footer">
+                        <p class="ac-header ac-header_footer paragraph-reset ftitle fcontact__title">
+                            <button type="button" class="ac-trigger ac-trigger_footer">Клиентам</button>
+                        </p>
+                        <div class="ac-panel ac-panel_footer">
+                            <ul class="ac-text ac-text_footer list-reset flist fclient__list">
+                                <li class="fclient__item fitem fclient__item_active">
+                                    <a href="index.html#block_pay">Оплата счета</a>
+                                </li>
+                                <li class="fclient__item fitem">
+                                    <a href="form.html">Форма для заявок</a>
+                                </li>
+                                <li class="fclient__item fitem">
+                                    <a href="index.html#block_uslugi">Каталог услуг</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ac ac_footer">
+                        <p class="ac-header ac-header_footer paragraph-reset ftitle fcontact__title">
+                            <button type="button" class="ac-trigger ac-trigger_footer">Компания</button>
+                        </p>
+                        <div class="ac-panel ac-panel_footer">
+                            <ul class="ac-text ac-text_footer list-reset flist company__list">
+                                <li class="company__item fitem">
+                                    <a href="about.html">О компании</a>
+                                </li>
+                                <li class="company__item fitem">
+                                    <a href="#">Документы</a>
+                                </li>
+                                <li class="company__item fitem">
+                                    <a href="contacts.html">Контакты</a>
+                                </li>
+                                <li class="company__item fitem">
+                                    <a href="requisites.html">Реквизиты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer_contact fcontact footer_contact_mobile">
+                        <div class="fcontact__icons ficons">
+                            <div class="ficons__image ficons__image_mail">
+                                <a href="mailto:ultraservis08@yandex.ru"><img class="ficons__img"
+                                        src="img/icon-letter.svg" alt=""></a>
+                            </div>
+                            <div class="ficons__image">
+                                <a href="tel:+74114772300"><img class="ficons__img" src="img/icon-phone.svg" alt=""></a>
+                            </div>
+                            <div class="ficons__image">
+                                <a href="#"><img class="ficons__img" src="img/icon-telegram.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <p class="paragraph-reset fcontact__copy">
+                            &copy;&nbsp;2024&nbsp;Ультрасервис.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/accordion-js@3.4.0/dist/accordion.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script src="script/script2.js"></script>
+</body>
+
+</html>
